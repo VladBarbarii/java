@@ -75,8 +75,8 @@ public class Main {
 
         int a6[] = {1,2,3};
         int a7[] =  Arrays.copyOf(a6, 3);
-        int a8[] = Arrays.copyOf()
         Arrays.sort(a6);
+        System.out.println("test");
 
 
     }
