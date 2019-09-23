@@ -2,12 +2,11 @@ import navinInterfaces.Car;
 import navinInterfaces.Mercedes;
 import navinInterfaces.Mustang;
 import navinInterfaces.Person;
+import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.Currency;
-import java.util.Scanner;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.IntStream;
 
@@ -17,11 +16,29 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
 
+    public enum Day {Monday, Tuesday, Wednesday}
+
     final double SHORTPI = 3.14159;
 
-
+ private static void yo(int... arr){
+    for (int x :
+            arr) {
+        System.out.println(x);
+    }}
     public static void main(String[] args) {
 
+     try {
+         int x = 0;
+         int y = 5/x;
+     } catch (ArithmeticException  e){
+         System.out.println("sup");
+     }
+
+
+
+     Day favDay = Day.Tuesday;
+
+yo(10,15);
         System.out.println("Hello world");
 
 
@@ -77,6 +94,40 @@ public class Main {
         int a7[] =  Arrays.copyOf(a6, 3);
         Arrays.sort(a6);
         System.out.println("test");
+
+        ArrayList<String> aL=new ArrayList<>(5);
+        System.out.println(aL.size());
+        aL.add("Lion");
+        aL.add("Tiger");
+        aL.add("Cat");
+        aL.add("Dog");
+        aL.add(2, "HEY");
+        System.out.println(aL.get(0));
+        for (String element:
+             aL) {
+            System.out.println(element);
+        }
+
+        Iterator it = aL.iterator();
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
+
+
+        LinkedList lN = new LinkedList<Integer>();
+
+        String lang = "France";
+        switch (lang){
+            case "Chile":
+                System.out.println("hola");
+                break;
+            case "France":
+                System.out.println("bfgfbgbgb");
+                break;
+            default:
+                System.out.println("REGdhfdh");
+                break;
+        }
 
 
     }
